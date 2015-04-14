@@ -14,7 +14,7 @@ Creates an issue on StatusPage.io and (optionally) updates a component status.
 
 **metrics-statuspageio**
 
-Send graphite-style metrics to statuspage.io, for displaying public metrics.  Note, this forks and is not meant for high-throughput.  Rather, it is meant for high-value, low-throughput metrics for display on status page.
+Sends graphite-style metrics to statuspage.io, for displaying public metrics.  Note, this forks and is not meant for high-throughput.  Rather, it is meant for high-value, low-throughput metrics for display on status page.
 
 ## Files
  * bin/handler-statuspage
@@ -93,6 +93,7 @@ gem install redphone-0.0.6.gem  OR  /opt/sensu/embedded/bin/gem install redphone
 ```
 
 To update a component add a ```"component_id": "IDHERE"``` attribute to the corresponding check definition
+
 Example:
 ```
 {
