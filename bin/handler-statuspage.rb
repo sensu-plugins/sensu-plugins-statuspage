@@ -1,10 +1,11 @@
 #!/usr/bin/env ruby
 #
-# This handler creates and updates incidents for StatusPage.IO.
+# This handler creates and updates incidents and changes a component status (optional) for StatusPage.IO.
 # Due to a bug with their API, please pair a Twitter account to your StatusPage even if you don't plan to tweet.
 #
 # Copyright 2011 Sonian, Inc <chefs@sonian.net>
 # Copyright 2013 DISQUS, Inc.
+# Updated by jfledvin with Basic Component Support 4/14/2015
 #
 # Released under the same terms as Sensu (the MIT license); see LICENSE
 # for details.
@@ -26,6 +27,21 @@ class StatusPage < Sensu::Handler
     description = @event['notification'] || [@event['client']['name'], @event['check']['name'], @event['check']['output']].join(' : ')
     begin
       timeout(3) do
+        if @event['check'].key?('component_id')
+          status = case @event['action']
+                   when 'create'
+                     'major_outage'
+                   when 'resolve'
+                     'operational'
+                   else
+                     nil
+                   end
+          unless status.nil?
+            statuspage.update_component(
+              component_id: @event['check']['component_id'],
+              status: status)
+          end
+        end
         response = case @event['action']
                    when 'create'
                      # #YELLOW
