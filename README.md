@@ -47,6 +47,7 @@ Sends graphite-style metrics to statuspage.io, for displaying public metrics.  N
 ```
 ## Installation
 
+<<<<<<< HEAD
 Add the public key (if you haven’t already) as a trusted certificate
 
 ```
@@ -81,6 +82,9 @@ gem_package 'sensu-plugins-statuspage' do
   version '0.0.1'
 end
 ```
+=======
+[Installation and Setup](https://github.com/sensu-plugins/documentation/blob/master/user_docs/installation_instructions.md)
+>>>>>>> update repo
 
 ## Notes
 As of this writing Redphone has not added StatusPage.io support to v0.0.6
