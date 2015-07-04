@@ -33,7 +33,7 @@ class StatusPage < Sensu::Handler
                      'major_outage'
                    when 'resolve'
                      'operational'
-                   else
+                   else # rubocop:disable all
                      nil
                    end
           unless status.nil?
