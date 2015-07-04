@@ -5,6 +5,7 @@
 [![Code Climate](https://codeclimate.com/github/sensu-plugins/sensu-plugins-statuspage/badges/gpa.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-statuspage)
 [![Test Coverage](https://codeclimate.com/github/sensu-plugins/sensu-plugins-statuspage/badges/coverage.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-statuspage)
 [![Dependency Status](https://gemnasium.com/sensu-plugins/sensu-plugins-statuspage.svg)](https://gemnasium.com/sensu-plugins/sensu-plugins-statuspage)
+[ ![Codeship Status for sensu-plugins/sensu-plugins-statuspage](https://codeship.com/projects/b454e0b0-edb1-0132-0ba1-1efd3f886df2/status?branch=master)](https://codeship.com/projects/84066)
 
 ## Functionality
 
@@ -47,46 +48,10 @@ Sends graphite-style metrics to statuspage.io, for displaying public metrics.  N
 ```
 ## Installation
 
-<<<<<<< HEAD
-Add the public key (if you haven’t already) as a trusted certificate
-
-```
-gem cert --add <(curl -Ls https://raw.githubusercontent.com/sensu-plugins/sensu-plugins.github.io/master/certs/sensu-plugins.pem)
-gem install sensu-plugins-statuspage -P MediumSecurity
-```
-
-You can also download the key from /certs/ within each repository.
-
-#### Rubygems
-
-`gem install sensu-plugins-statuspage`
-
-#### Bundler
-
-Add *sensu-plugins-statuspage* to your Gemfile and run `bundle install` or `bundle update`
-
-#### Chef
-
-Using the Sensu **sensu_gem** LWRP
-```
-sensu_gem 'sensu-plugins-statuspage' do
-  options('--prerelease')
-  version '0.0.1'
-end
-```
-
-Using the Chef **gem_package** resource
-```
-gem_package 'sensu-plugins-statuspage' do
-  options('--prerelease')
-  version '0.0.1'
-end
-```
-=======
 [Installation and Setup](https://github.com/sensu-plugins/documentation/blob/master/user_docs/installation_instructions.md)
->>>>>>> update repo
 
 ## Notes
+
 As of this writing Redphone has not added StatusPage.io support to v0.0.6
 You must manually build and install the gem:
 ```
