@@ -37,7 +37,7 @@ Gem::Specification.new do |s|
   s.test_files             = s.files.grep(%r{^(test|spec|features)/})
   s.version                = SensuPluginsStatuspage::Version::VER_STRING
 
-  s.add_runtime_dependency 'sensu-plugin',      '1.1.0'
+  s.add_runtime_dependency 'sensu-plugin',      '1.2.0'
   s.add_runtime_dependency 'httparty',          '0.13.5'
   s.add_runtime_dependency 'redphone',          '0.0.6'
 
