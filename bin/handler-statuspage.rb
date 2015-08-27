@@ -33,8 +33,6 @@ class StatusPage < Sensu::Handler
                      'major_outage'
                    when 'resolve'
                      'operational'
-                   else # rubocop:disable all
-                     nil
                    end
           unless status.nil?
             statuspage.update_component(
@@ -44,8 +42,7 @@ class StatusPage < Sensu::Handler
         end
         response = case @event['action']
                    when 'create'
-                     # #YELLOW
-                     response = statuspage.create_realtime_incident( # rubocop:disable UselessAssignment, SpaceInsideParens
+                     statuspage.create_realtime_incident(
                        name: incident_key,
                        status: 'investigating',
                        wants_twitter_update: 'f',
@@ -59,8 +56,8 @@ class StatusPage < Sensu::Handler
                          break
                        end
                      end
-                     # #YELLOW
-                     response = statuspage.update_incident( # rubocop:disable UselessAssignment, SpaceInsideParens
+                   else
+                     statuspage.update_incident(
                        name: "Problem with #{incident_key} has been resolved.",
                        wants_twitter_update: 'f',
                        status: 'resolved',
