@@ -56,7 +56,6 @@ class StatusPage < Sensu::Handler
                          break
                        end
                      end
-                   else
                      statuspage.update_incident(
                        name: "Problem with #{incident_key} has been resolved.",
                        wants_twitter_update: 'f',
@@ -64,7 +63,7 @@ class StatusPage < Sensu::Handler
                        incident_id: incident_id
                      )
                    end
-        if (response['status'] == 'investigating' || @event['action'] == 'create') || (response['status'] == 'resolved' || @event['action'] == 'resolve')
+        if (response['status'] == 'investigating' && @event['action'] == 'create') || (response['status'] == 'resolved' && @event['action'] == 'resolve')
           puts 'statuspage -- ' + @event['action'].capitalize + 'd incident -- ' + incident_key
         else
           puts 'statuspage -- failed to ' + @event['action'] + ' incident -- ' + incident_key
