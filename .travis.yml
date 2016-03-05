@@ -1,19 +1,33 @@
 language: ruby
 cache:
-  - bundler
+- bundler
 install:
-  - bundle install
+- bundle install
 rvm:
-  - 1.9.3
-  - 2.0
-  - 2.1
-  - 2.2
+- 1.9.3
+- 2.0
+- 2.1
+- 2.2
 notifications:
   email:
     recipients:
-      - sensu-plugin@sensu-plugins.io
+    - sensu-plugin@sensu-plugins.io
     on_success: change
     on_failure: always
-
 script:
-  - 'bundle exec rake default'
+- bundle exec rake default
+- gem build sensu-plugins-statuspage.gemspec
+- gem install sensu-plugins-statuspage-*.gem
+deploy:
+  provider: rubygems
+  api_key:
+    secure: SZmQ/LmAbx/IolbT2TuCfQlHTlGwgJLNsjsA2f3ns0gC8CWn0IWObapWHayCGo969UgK96J9rOfyu79s5FVVfG6CdnpzvI9KnBR1CX7WxKFDyd+sBkIiA3Pbtmcm2NvHMpX4gBG9YteT/JM2FZkBOWbeaKzsCog3/LrCQiUii/U=
+  gem: sensu-plugins-statuspage
+  on:
+    ags: true
+    all_branches: true
+    rvm: 1.9.3
+    rvm: 2.0
+    rvm: 2.1
+    rvm: 2.2
+    repo: sensu-plugins/sensu-plugins-statuspage
