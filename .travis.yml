@@ -24,7 +24,7 @@ deploy:
     secure: SZmQ/LmAbx/IolbT2TuCfQlHTlGwgJLNsjsA2f3ns0gC8CWn0IWObapWHayCGo969UgK96J9rOfyu79s5FVVfG6CdnpzvI9KnBR1CX7WxKFDyd+sBkIiA3Pbtmcm2NvHMpX4gBG9YteT/JM2FZkBOWbeaKzsCog3/LrCQiUii/U=
   gem: sensu-plugins-statuspage
   on:
-    ags: true
+    tags: true
     all_branches: true
     rvm: 1.9.3
     rvm: 2.0
