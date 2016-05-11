@@ -37,7 +37,8 @@ class StatusPage < Sensu::Handler
           unless status.nil?
             statuspage.update_component(
               component_id: @event['check']['component_id'],
-              status: status)
+              status: status
+            )
           end
         end
         response = case @event['action']
