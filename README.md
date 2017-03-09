@@ -60,7 +60,7 @@ gem build redphone.gemspec  OR  /opt/sensu/embedded/bin/gem build redphone.gemsp
 gem install redphone-0.0.6.gem  OR  /opt/sensu/embedded/bin/gem install redphone-0.0.6.gem
 ```
 
-To update a component add a ```"component_id": "IDHERE"``` attribute to the corresponding check definition
+To update a component add a `"component_id": "IDHERE"` attribute to the corresponding check definition
 
 Example:
 ```
@@ -69,6 +69,27 @@ Example:
     "check_sshd": {
       "handlers": ["statuspage"],
       "component_id": "IDHERE",
+      "command": "/etc/sensu/plugins/check-procs.rb -p sshd -C 1 ",
+      "interval": 60,
+      "subscribers": [ "default" ]
+    }
+  }
+}
+```
+
+To choose your own component or incident statuses instead of the defaults add the `statuspage_<component/incident>_<status>` in the check definition.
+
+Example:
+```
+{
+  "checks": {
+    "check_sshd": {
+      "handlers": ["statuspage"],
+      "component_id": "IDHERE",
+      "statuspage_component_warning": "degraded_performance",
+      "statuspage_component_critical": "partial_outage",
+      "statuspage_incident_warning": "ignore",
+      "statuspage_incident_critical": "identified",
       "command": "/etc/sensu/plugins/check-procs.rb -p sshd -C 1 ",
       "interval": 60,
       "subscribers": [ "default" ]
