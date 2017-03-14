@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachangelog.com/)
 
 ## [Unreleased]
+### Changed
+- Allow desired component/incident status configuration per check.
+- Update existing incidents on any change, not just on resolution.
+- 'minor' alerts are now mapped to 'partial_outage' component status
+- All alerts make the incident status 'identified', rather than 'investigating'
 
 ## [0.0.3] - 2015-12-30
 ### Changed
