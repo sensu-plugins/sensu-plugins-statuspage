@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachangelog.com/)
 
 ## [Unreleased]
+
+## [1.0.0] - 2017-05-16
 ### Added
 - Support for Ruby 2.3 and 2.4 (@eheydrick)
 
@@ -14,7 +16,7 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 - Allow desired component/incident status configuration per check. (@athal7)
 - Update existing incidents on any change, not just on resolution.  (@athal7)
 - 'minor' alerts are now mapped to 'partial_outage' component status (@athal7)
-- All alerts make the incident status 'identified', rather than 'investigating' (@athal7)
+- All alerts make the incident status 'identified' rather than 'investigating' (@athal7)
 
 ## [0.0.3] - 2015-12-30
 ### Changed
@@ -28,6 +30,7 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 ### Added
 - initial release
 
-[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-statuspage/compare/0.0.3...HEAD
+[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-statuspage/compare/1.0.0...HEAD
+[1.0.0]: https://github.com/sensu-plugins/sensu-plugins-statuspage/compare/0.0.3...1.0.0
 [0.0.3]: https://github.com/sensu-plugins/sensu-plugins-statuspage/compare/0.0.2...0.0.3
 [0.0.2]: https://github.com/sensu-plugins/sensu-plugins-statuspage/compare/0.0.1...0.0.2
