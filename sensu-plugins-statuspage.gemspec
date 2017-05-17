@@ -2,16 +2,10 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require 'date'
-
-if RUBY_VERSION < '2.0.0'
-  require 'sensu-plugins-statuspage'
-else
-  require_relative 'lib/sensu-plugins-statuspage'
-end
+require_relative 'lib/sensu-plugins-statuspage'
 
 Gem::Specification.new do |s|
   s.authors                = ['Sensu-Plugins and contributors']
-
   s.date                   = Date.today.to_s
   s.description            = 'Sensu statuspage plugins'
   s.email                  = '<sensu-users@googlegroups.com>'
@@ -28,8 +22,7 @@ Gem::Specification.new do |s|
   s.platform               = Gem::Platform::RUBY
   s.post_install_message   = 'You can use the embedded Ruby by setting EMBEDDED_RUBY=true in /etc/default/sensu'
   s.require_paths          = ['lib']
-  s.required_ruby_version  = '>= 1.9.3'
-
+  s.required_ruby_version  = '>= 2.0.0'
   s.summary                = 'Sensu plugins for statuspage'
   s.test_files             = s.files.grep(%r{^(test|spec|features)/})
   s.version                = SensuPluginsStatuspage::Version::VER_STRING
