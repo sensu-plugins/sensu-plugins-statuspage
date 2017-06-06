@@ -32,6 +32,18 @@ Sends graphite-style metrics to statuspage.io, for displaying public metrics.  N
 }
 ```
 
+For use of a basic proxy, use "proxy_address" and "proxy_port":
+```
+{
+  "statuspage": {
+    "api_key": "YOURAPIKEY",
+    "page_id": "YOURPAGEID",
+    "proxy_port": "YOURPROXY",
+    "proxy_address": "YOURPROXYADDRESS"
+  }
+}
+```
+
 **metrics-statuspageio**
 ```
 {
