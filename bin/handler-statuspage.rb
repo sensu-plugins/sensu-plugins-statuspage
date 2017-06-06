@@ -87,7 +87,9 @@ class StatusPage < Sensu::Handler
   def handle
     statuspage = Redphone::Statuspage.new(
       page_id: settings['statuspage']['page_id'],
-      api_key: settings['statuspage']['api_key']
+      api_key: settings['statuspage']['api_key'],
+      proxy_address: settings['statuspage']['proxy_address'],
+      proxy_port: settings['statuspage']['proxy_port']
     )
     begin
       timeout(3) do
