@@ -5,6 +5,10 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 
 ## [Unreleased]
 
+## [1.1.0] - 2017-06
+### Added
+- handler-statuspage.rb: add ability to send requests through an unauthenticated proxy (@drhey)
+
 ## [1.0.0] - 2017-05-16
 ### Added
 - Support for Ruby 2.3 and 2.4 (@eheydrick)
@@ -30,7 +34,8 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 ### Added
 - initial release
 
-[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-statuspage/compare/1.0.0...HEAD
+[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-statuspage/compare/1.1.0...HEAD
+[1.1.0]: https://github.com/sensu-plugins/sensu-plugins-statuspage/compare/1.0.0...1.1.0
 [1.0.0]: https://github.com/sensu-plugins/sensu-plugins-statuspage/compare/0.0.3...1.0.0
 [0.0.3]: https://github.com/sensu-plugins/sensu-plugins-statuspage/compare/0.0.2...0.0.3
 [0.0.2]: https://github.com/sensu-plugins/sensu-plugins-statuspage/compare/0.0.1...0.0.2
