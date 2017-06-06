@@ -92,7 +92,7 @@ class StatusPage < Sensu::Handler
       proxy_port: settings['statuspage']['proxy_port']
     )
     begin
-      timeout(3) do
+      Timeout.timeout(3) do
         if @event['check'].key?('component_id')
           unless ignore_status?(component_status)
             statuspage.update_component(
