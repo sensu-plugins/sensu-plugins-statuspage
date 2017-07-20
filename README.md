@@ -16,7 +16,12 @@ Creates an issue on StatusPage.io and (optionally) updates a component status.
 
 Sends graphite-style metrics to statuspage.io, for displaying public metrics.  Note, this forks and is not meant for high-throughput.  Rather, it is meant for high-value, low-throughput metrics for display on status page.
 
+**check-statuspage-status**
+
+Check the status rollup of a statuspage instance
+
 ## Files
+ * bin/check-statuspage-status
  * bin/handler-statuspage
  * bin/metrics-statuspageio
 
@@ -57,6 +62,12 @@ For use of a basic proxy, use "proxy_address" and "proxy_port":
     }
 }
 ```
+
+**check-statuspage-status**
+
+Use `-u` to set the url to your statuspage instance.
+* `/opt/sensu/embedded/bin/check-statuspage-status.rb -u https://metastatuspage.com`
+
 ## Installation
 
 [Installation and Setup](http://sensu-plugins.io/docs/installation_instructions.html)
