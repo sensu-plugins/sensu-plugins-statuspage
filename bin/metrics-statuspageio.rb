@@ -43,13 +43,13 @@ class StatusPageIOMetrics < Sensu::Handler
 
   def handle
     # Grab page_id and api_key from dashboard
-    @api_key = settings['handlers']['statuspageio_metrics']['api_key']
-    @page_id = settings['handlers']['statuspageio_metrics']['page_id']
+    @api_key = settings['statuspageio_metrics']['api_key']
+    @page_id = settings['statuspageio_metrics']['page_id']
 
     # Get a dict of metric_from_output => metric_ids
     # This allows the re-use of standard metrics plugins that can be mapped to
     # statuspage io metrics
-    @metrics = settings['handlers']['statuspageio_metrics']['metrics'] || {}
+    @metrics = settings['statuspageio_metrics']['metrics'] || {}
 
     # Split graphite-style metrics
     @event['check']['output'].split(/\n/).each do |m|

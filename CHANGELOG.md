@@ -5,6 +5,10 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 
 ## [Unreleased]
 
+## [1.1.0] - 2017-07
+### Fixed
+- metrics-statuspageio.rb: remove 'handlers' key from settings variable(@chrissav)
+
 ## [1.1.0] - 2017-06
 ### Added
 - handler-statuspage.rb: add ability to send requests through an unauthenticated proxy (@drhey)
