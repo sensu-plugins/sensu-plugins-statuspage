@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachangelog.com/)
 
 ## [Unreleased]
+
+## [1.2.0] - 2017-07-21
 ### Added
 - check-statuspage-status.rb: a plugin to check the status rollup of a statuspage instance (@spacepants)
 
@@ -40,7 +42,8 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 ### Added
 - initial release
 
-[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-statuspage/compare/1.1.1...HEAD
+[Unreleased]: https://github.com/sensu-plugins/sensu-plugins-statuspage/compare/1.2.0...HEAD
+[1.2.0]: https://github.com/sensu-plugins/sensu-plugins-statuspage/compare/1.1.1...1.2.0
 [1.1.1]: https://github.com/sensu-plugins/sensu-plugins-statuspage/compare/1.1.0...1.1.1
 [1.1.0]: https://github.com/sensu-plugins/sensu-plugins-statuspage/compare/1.0.0...1.1.0
 [1.0.0]: https://github.com/sensu-plugins/sensu-plugins-statuspage/compare/0.0.3...1.0.0
