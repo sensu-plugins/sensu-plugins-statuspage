@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
   s.version                = SensuPluginsStatuspage::Version::VER_STRING
 
   s.add_runtime_dependency 'sensu-plugin', '~> 1.2'
-  s.add_runtime_dependency 'httparty',          '0.13.5'
+  s.add_runtime_dependency 'httparty',          '0.17.0'
   s.add_runtime_dependency 'redphone',          '0.0.6'
 
   s.add_development_dependency 'bundler',                   '~> 1.7'
